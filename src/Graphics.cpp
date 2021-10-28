@@ -23,6 +23,8 @@ void Graphics::loadBackgroundImg()
     // create window
     _windowName = "Concurrency Traffic Simulation";
     cv::namedWindow(_windowName, cv::WINDOW_NORMAL);
+    // Resize window to fit image (scaled down).
+    cv::resizeWindow(_windowName, 887, 500);
 
     // load image and create copy to be used for semi-transparent overlay
     cv::Mat background = cv::imread(_bgFilename);
